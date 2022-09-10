@@ -23,7 +23,7 @@ with col1:
     st.write(' ')
 
 with col2:
-    st.image("images\cifar-10.jpg",width=600)
+    st.image("images\\cifar-10.jpg",width=600)
 with col3:
     st.write(' ')
 
