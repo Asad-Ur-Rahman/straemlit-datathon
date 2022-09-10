@@ -31,22 +31,22 @@ with col3:
 #adding test image
 #subheader
 st.subheader("Sample Test Image")
-st.image('Images\\testing_images.png')
+st.image('images\\testing_images.png')
 #adding train image'
 st.subheader("Sample Train Image")
-st.image('Images\\training_images.png')
+st.image('images\\training_images.png')
 
 #class distribution
 st.subheader("Class Distribution of Cifar10 TrainDataset")
-st.image('Images\per_class_distrubution.png')
+st.image('images\per_class_distrubution.png')
 
 #class distribution of test
 st.subheader("Class Distribution of Cifar10 Test Dataset")
-st.image('Images\per_class_distrubution_test.png')
+st.image('images\per_class_distrubution_test.png')
 
 # showing heatmap
 st.subheader("Heatmap of Cifar10 Train Dataset")
-st.image('Images\\best_heatmap.png')
+st.image('images\\best_heatmap.png')
 
 #alogrithm selection
 st.sidebar.header("Select Algorithm")
@@ -105,16 +105,16 @@ if st.button("Predict"):
 #showing accuracy graphs of the model
 st.header("Graphs of selected model")
 if algorithm == "ANN":
-    st.image(["Images\\ann_accuracy.png","Images\\ann_loss.png"])
+    st.image(["images\\ann_accuracy.png","images\\ann_loss.png"])
 elif algorithm == "Sequential-CNN":
-    st.image(["Images\cnn_accuracy.png","Images\cnn_loss.png"])
+    st.image(["images\cnn_accuracy.png","images\cnn_loss.png"])
 elif algorithm == "CNN-Functional-API":
-    st.image(["Images\cnn_fun_accuracy.png","Images\cnn_fun_loss.png"])
+    st.image(["images\cnn_fun_accuracy.png","images\cnn_fun_loss.png"])
 
 
 #algorithm == "CNN-Functional API trained with augmented images":
 st.header("Best Model")
-st.image(["Images\\best_accuracy.png","Images\\best_loss.png"])
+st.image(["images\\best_accuracy.png","images\\best_loss.png"])
     #st.image("fapi_aug_v1.png", caption="CNN-Functional API trained with augmented images Accuracy Graph",width=500)
 
 
