@@ -23,29 +23,29 @@ with col1:
     st.write(' ')
 
 with col2:
-    st.image("cifar-10.jpg",width=600)
+    st.image("Images\cifar-10.jpg",width=600)
 with col3:
     st.write(' ')
 
 #adding test image
 #subheader
 st.subheader("Sample Test Image")
-st.image('testing_images.png')
+st.image('Images\\testing_images.png')
 #adding train image'
 st.subheader("Sample Train Image")
-st.image('training_images.png')
+st.image('Images\\training_images.png')
 
 #class distribution
 st.subheader("Class Distribution of Cifar10 TrainDataset")
-st.image('per_class_distrubution.png')
+st.image('Images\per_class_distrubution.png')
 
 #class distribution of test
 st.subheader("Class Distribution of Cifar10 Test Dataset")
-st.image('per_class_distrubution_test.png')
+st.image('Images\per_class_distrubution_test.png')
 
 # showing heatmap
 st.subheader("Heatmap of Cifar10 Train Dataset")
-st.image('best_heatmap.png')
+st.image('Images\\best_heatmap.png')
 
 #alogrithm selection
 st.sidebar.header("Select Algorithm")
@@ -61,13 +61,13 @@ class_name = ["airplane", "automobile" , "bird" , "cat" , "deer" , "dog" , "frog
 @st.cache(allow_output_mutation=True)
 def load_my_model():
     if algorithm == "ANN":
-        model = tf.keras.models.load_model("ann_v1.h5")
+        model = tf.keras.models.load_model("models\\ann_v1.h5")
     elif algorithm == "Sequential-CNN":
-        model = tf.keras.models.load_model("cnn_v1.h5")
+        model = tf.keras.models.load_model("models\cnn_v1.h5")
     elif algorithm == "CNN-Functional-API":
-        model = tf.keras.models.load_model("fapi_v1.h5")
+        model = tf.keras.models.load_model("models\fapi_v1.h5")
     elif algorithm == "CNN-Functional API trained with augmented images":
-        model = tf.keras.models.load_model("fapi_aug_v1.h5")
+        model = tf.keras.models.load_model("models\fapi_aug_v1.h5")
     return model
 
 model = load_my_model()
@@ -104,16 +104,16 @@ if st.button("Predict"):
 #showing accuracy graphs of the model
 st.header("Graphs of selected model")
 if algorithm == "ANN":
-    st.image(["ann_accuracy.png","ann_loss.png"])
+    st.image(["Images\\ann_accuracy.png","Images\\ann_loss.png"])
 elif algorithm == "Sequential-CNN":
-    st.image(["cnn_accuracy.png","cnn_loss.png"])
+    st.image(["Images\cnn_accuracy.png","Images\cnn_loss.png"])
 elif algorithm == "CNN-Functional-API":
-    st.image(["cnn_fun_accuracy.png","cnn_fun_loss.png"])
+    st.image(["Images\cnn_fun_accuracy.png","Images\cnn_fun_loss.png"])
 
 
 #algorithm == "CNN-Functional API trained with augmented images":
 st.header("Best Model")
-st.image(["best_accuracy.png","best_loss.png"])
+st.image(["Images\\best_accuracy.png","Images\\best_loss.png"])
     #st.image("fapi_aug_v1.png", caption="CNN-Functional API trained with augmented images Accuracy Graph",width=500)
 
 
