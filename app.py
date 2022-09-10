@@ -1,6 +1,5 @@
 # import the Package
-import os
-# from tkinter import font
+ 
 import numpy as np 
 from PIL import Image , ImageOps
 import streamlit as st
