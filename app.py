@@ -42,11 +42,11 @@ st.image('images/per_class_distrubution.png')
 
 #class distribution of test
 st.subheader("Class Distribution of Cifar10 Test Dataset")
-st.image('images\per_class_distrubution_test.png')
+st.image('images/per_class_distrubution_test.png')
 
 # showing heatmap
 st.subheader("Heatmap of Cifar10 Train Dataset")
-st.image('images\\best_heatmap.png')
+st.image('images/best_heatmap.png')
 
 #alogrithm selection
 st.sidebar.header("Select Algorithm")
