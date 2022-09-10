@@ -23,7 +23,7 @@ with col1:
     st.write(' ')
 
 with col2:
-    st.image("images\\cifar-10.jpg",width=600)
+    st.image("images\cifar-10.jpg",width=600)
 with col3:
     st.write(' ')
 
@@ -65,7 +65,7 @@ def load_my_model():
     elif algorithm == "Sequential-CNN":
         model = tf.keras.models.load_model("models\cnn_v1.h5")
     elif algorithm == "CNN-Functional-API":
-        model = tf.keras.models.load_model("models\fapi_v1.h5")
+        model = tf.keras.models.load_model("models\\fapi_v1.h5")
     elif algorithm == "CNN-Functional API trained with augmented images":
         model = tf.keras.models.load_model("models\fapi_aug_v1.h5")
     return model
