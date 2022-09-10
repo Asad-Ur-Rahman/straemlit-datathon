@@ -31,14 +31,14 @@ with col3:
 #adding test image
 #subheader
 st.subheader("Sample Test Image")
-st.image('images\\testing_images.png')
+st.image('images/testing_images.png')
 #adding train image'
 st.subheader("Sample Train Image")
-st.image('images\\training_images.png')
+st.image('images/training_images.png')
 
 #class distribution
 st.subheader("Class Distribution of Cifar10 TrainDataset")
-st.image('images\per_class_distrubution.png')
+st.image('images/per_class_distrubution.png')
 
 #class distribution of test
 st.subheader("Class Distribution of Cifar10 Test Dataset")
