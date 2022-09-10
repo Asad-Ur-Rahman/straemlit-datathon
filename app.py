@@ -109,7 +109,7 @@ if algorithm == "ANN":
 elif algorithm == "Sequential-CNN":
     st.image(["images/cnn_accuracy.png","images/cnn_loss.png"])
 elif algorithm == "CNN-Functional-API":
-    st.image(["images\cnn_fun_accuracy.png","images/cnn_fun_loss.png"])
+    st.image(["images/cnn_fun_accuracy.png","images/cnn_fun_loss.png"])
 
 
 #algorithm == "CNN-Functional API trained with augmented images":
