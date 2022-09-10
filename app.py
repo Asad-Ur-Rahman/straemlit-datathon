@@ -62,13 +62,13 @@ class_name = ["airplane", "automobile" , "bird" , "cat" , "deer" , "dog" , "frog
 @st.cache(allow_output_mutation=True)
 def load_my_model():
     if algorithm == "ANN":
-        model = tf.keras.models.load_model("models\\ann_v1.h5")
+        model = tf.keras.models.load_model("models/ann_v1.h5")
     elif algorithm == "Sequential-CNN":
-        model = tf.keras.models.load_model("models\cnn_v1.h5")
+        model = tf.keras.models.load_model("models/cnn_v1.h5")
     elif algorithm == "CNN-Functional-API":
-        model = tf.keras.models.load_model("models\\fapi_v1.h5")
+        model = tf.keras.models.load_model("models/fapi_v1.h5")
     elif algorithm == "CNN-Functional API trained with augmented images":
-        model = tf.keras.models.load_model("models\fapi_aug_v1.h5")
+        model = tf.keras.models.load_model("models/fapi_aug_v1.h5")
     return model
 
 model = load_my_model()
@@ -105,16 +105,16 @@ if st.button("Predict"):
 #showing accuracy graphs of the model
 st.header("Graphs of selected model")
 if algorithm == "ANN":
-    st.image(["images\\ann_accuracy.png","images\\ann_loss.png"])
+    st.image(["images/ann_accuracy.png","images/ann_loss.png"])
 elif algorithm == "Sequential-CNN":
-    st.image(["images\cnn_accuracy.png","images\cnn_loss.png"])
+    st.image(["images/cnn_accuracy.png","images/cnn_loss.png"])
 elif algorithm == "CNN-Functional-API":
-    st.image(["images\cnn_fun_accuracy.png","images\cnn_fun_loss.png"])
+    st.image(["images\cnn_fun_accuracy.png","images/cnn_fun_loss.png"])
 
 
 #algorithm == "CNN-Functional API trained with augmented images":
 st.header("Best Model")
-st.image(["images\\best_accuracy.png","images\\best_loss.png"])
+st.image(["images/best_accuracy.png","images/best_loss.png"])
     #st.image("fapi_aug_v1.png", caption="CNN-Functional API trained with augmented images Accuracy Graph",width=500)
 
 
