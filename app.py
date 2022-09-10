@@ -23,18 +23,18 @@ with col1:
     st.write(' ')
 
 with col2:
-    # st.image("images\cifar-10.jpg",width=600)
-    pass
+    st.image("images\cifar-10.jpg",width=600)
+    # pass
 with col3:
     st.write(' ')
 
 #adding test image
 #subheader
 st.subheader("Sample Test Image")
-st.image('images\testing_images.png')
+st.image('images\\testing_images.png')
 #adding train image'
 st.subheader("Sample Train Image")
-st.image('images\training_images.png')
+st.image('images\\training_images.png')
 
 #class distribution
 st.subheader("Class Distribution of Cifar10 TrainDataset")
@@ -46,7 +46,7 @@ st.image('images\per_class_distrubution_test.png')
 
 # showing heatmap
 st.subheader("Heatmap of Cifar10 Train Dataset")
-st.image('images\best_heatmap.png')
+st.image('images\\best_heatmap.png')
 
 #alogrithm selection
 st.sidebar.header("Select Algorithm")
