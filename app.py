@@ -9,7 +9,7 @@ import tensorflow as tf
 
 
 # Create a title of web App
-st.title("Image Classification with Cifar10 Dataset")
+st.title("Cifar10 Image Classification")
 
 
 # writing description
@@ -48,10 +48,10 @@ with col3:
 # st.image('images/best_heatmap.png')
 
 #alogrithm selection
-st.sidebar.header("Select Algorithm")
+st.sidebar.header("Select Model")
 algorithm = st.sidebar.selectbox("Algorithm", ("ANN", "Sequential-CNN", "CNN-Functional-API","CNN-Functional API trained with augmented images"))
 #writng the selected algorithm
-st.header('Your selected algorithm is: ' + algorithm)
+st.header('Your selected model: ' + algorithm)
 
 
 
@@ -95,14 +95,18 @@ def import_and_predict(image_data , model):
     return prediction
 
 if st.button("Predict"):
-    image = Image.open(file)
-    st.image(image , use_column_width=True)
-    predictions = import_and_predict(image , model)
+    #error handling
+    if file is None:
+        st.text("Please Upload the image")
+    else:
+        image = Image.open(file)
+        st.image(image , use_column_width=True)
+        predictions = import_and_predict(image , model)
 
-    class_name = ["airplane", "automobile" , "bird" , "cat" , "deer" , "dog" , "frog" , "horse" , "ship" , "truck"]
+        class_name = ["airplane", "automobile" , "bird" , "cat" , "deer" , "dog" , "frog" , "horse" , "ship" , "truck"]
 
-    string = "Predicted Class: " + class_name[np.argmax(predictions)]
-    st.success(string)
+        string = "Predicted Class: " + class_name[np.argmax(predictions)]
+        st.success(string)
 
 #showing accuracy graphs of the model
 st.header("Graphs of selected model")
