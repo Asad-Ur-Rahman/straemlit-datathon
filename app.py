@@ -49,7 +49,7 @@ with col3:
 
 #alogrithm selection
 st.sidebar.header("Select Model")
-algorithm = st.sidebar.selectbox("Algorithm", ("ANN", "Sequential-CNN", "CNN-Functional-API","CNN-Functional API trained with augmented images"))
+algorithm = st.sidebar.selectbox("Algorithm", ("Artificial Neural Network (ANN)", "Convolutional Neural Network (CNN)","CNN with Data Augmentation"))
 #writng the selected algorithm
 st.header('Your selected model: ' + algorithm)
 
@@ -60,13 +60,13 @@ class_name = ["airplane", "automobile" , "bird" , "cat" , "deer" , "dog" , "frog
 # Create a function to load my saved model
 @st.cache(allow_output_mutation=True)
 def load_my_model():
-    if algorithm == "ANN":
+    if algorithm == "Artificial Neural Network (ANN)":
         model = tf.keras.models.load_model("models/ann_v1.h5")
-    elif algorithm == "Sequential-CNN":
-        model = tf.keras.models.load_model("models/cnn_v1.h5")
-    elif algorithm == "CNN-Functional-API":
+    # elif algorithm == "Sequential-CNN":
+    #     model = tf.keras.models.load_model("models/cnn_v1.h5")
+    elif algorithm == "Convolutional Neural Network (CNN)":
         model = tf.keras.models.load_model("models/fapi_v1.h5")
-    elif algorithm == "CNN-Functional API trained with augmented images":
+    elif algorithm == "CNN with Data Augmentation":
         model = tf.keras.models.load_model("models/fapi_aug_v1.h5")
     return model
 
@@ -110,12 +110,14 @@ if st.button("Predict"):
 
 #showing accuracy graphs of the model
 st.header("Graphs of selected model")
-if algorithm == "ANN":
+if algorithm == "Artificial Neural Network (ANN)":
     st.image(["images/ann_accuracy.png","images/ann_loss.png"])
-elif algorithm == "Sequential-CNN":
-    st.image(["images/cnn_accuracy.png","images/cnn_loss.png"])
-elif algorithm == "CNN-Functional-API":
+# elif algorithm == "Sequential-CNN":
+#     st.image(["images/cnn_accuracy.png","images/cnn_loss.png"])
+elif algorithm == "Convolutional Neural Network (CNN)":
     st.image(["images/cnn_fun_accuracy.png","images/cnn_fun_loss.png"])
+elif algorithm == "CNN with Data Augmentation":
+    st.image("images/cnn-dataug-graph.jpg")
 
 
 #algorithm == "CNN-Functional API trained with augmented images":
