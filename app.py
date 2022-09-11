@@ -111,11 +111,11 @@ if st.button("Predict"):
 #showing accuracy graphs of the model
 st.header("Graphs of selected model")
 if algorithm == "Artificial Neural Network (ANN)":
-    st.image(["images/ann_accuracy.png","images/ann_loss.png"])
+    st.image('images/ann-acc-graph.png')
 # elif algorithm == "Sequential-CNN":
 #     st.image(["images/cnn_accuracy.png","images/cnn_loss.png"])
 elif algorithm == "Convolutional Neural Network (CNN)":
-    st.image(["images/cnn_fun_accuracy.png","images/cnn_fun_loss.png"])
+    st.image("images/cnn-graph.png")
 elif algorithm == "CNN with Data Augmentation":
     st.image("images/cnn-dataug-graph.jpg")
 
