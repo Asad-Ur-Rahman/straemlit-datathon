@@ -51,7 +51,7 @@ with col3:
 st.sidebar.header("Select Model")
 algorithm = st.sidebar.selectbox("Algorithm", ("Artificial Neural Network (ANN)", "Convolutional Neural Network (CNN)","CNN with Data Augmentation"))
 #writng the selected algorithm
-st.header('Your selected model: ' + algorithm)
+st.header('Selected model: ' + algorithm)
 
 
 
