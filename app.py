@@ -29,23 +29,23 @@ with col3:
 
 #adding test image
 #subheader
-st.subheader("Sample Test Image")
-st.image('images/testing_images.png')
+# st.subheader("Sample Test Image")
+# st.image('images/testing_images.png')
 #adding train image'
-st.subheader("Sample Train Image")
-st.image('images/training_images.png')
+# st.subheader("Sample Train Image")
+# st.image('images/training_images.png')
 
 #class distribution
-st.subheader("Class Distribution of Cifar10 TrainDataset")
-st.image('images/per_class_distrubution.png')
+# st.subheader("Class Distribution of Cifar10 TrainDataset")
+# st.image('images/per_class_distrubution.png')
 
 #class distribution of test
-st.subheader("Class Distribution of Cifar10 Test Dataset")
-st.image('images/per_class_distrubution_test.png')
+# st.subheader("Class Distribution of Cifar10 Test Dataset")
+# st.image('images/per_class_distrubution_test.png')
 
 # showing heatmap
-st.subheader("Heatmap of Cifar10 Train Dataset")
-st.image('images/best_heatmap.png')
+# st.subheader("Heatmap of Cifar10 Train Dataset")
+# st.image('images/best_heatmap.png')
 
 #alogrithm selection
 st.sidebar.header("Select Algorithm")
@@ -76,8 +76,11 @@ model = load_my_model()
 
 
 
-st.header("Please Upload images related to this things...")
-st.text(class_name)
+# st.subheader("Please Upload images related to folllowing categories")
+
+
+# for x in class_name:
+#     st.text(x)
 
 # create a file uploader and take a image as an jpg or png
 file = st.file_uploader("Upload the image" , type=["jpg" , "png"])
@@ -98,7 +101,7 @@ if st.button("Predict"):
 
     class_name = ["airplane", "automobile" , "bird" , "cat" , "deer" , "dog" , "frog" , "horse" , "ship" , "truck"]
 
-    string = "Image mostly same as :-" + class_name[np.argmax(predictions)]
+    string = "Predicted Class: " + class_name[np.argmax(predictions)]
     st.success(string)
 
 #showing accuracy graphs of the model
@@ -112,8 +115,8 @@ elif algorithm == "CNN-Functional-API":
 
 
 #algorithm == "CNN-Functional API trained with augmented images":
-st.header("Best Model")
-st.image(["images/best_accuracy.png","images/best_loss.png"])
+# st.header("Best Model")
+# st.image(["images/best_accuracy.png","images/best_loss.png"])
     #st.image("fapi_aug_v1.png", caption="CNN-Functional API trained with augmented images Accuracy Graph",width=500)
 
 
